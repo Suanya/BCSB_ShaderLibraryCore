@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13306755, g: 0.17116472, b: 0.25096953, a: 1}
+  m_IndirectSpecularColor: {r: 0.2359294, g: 0.2934753, b: 0.36364153, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -908,31 +908,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particleSystems:
   - title: Mango UV
-    description: "struct Interpolaters  \n            { \n                \n               
-      float4 vertex : SV_POSITION; // clipSpacePosition of the vertex    \n               
-      float3 normal : TEXCOORD0;                    \n            };   \n\n           
-      Interpolaters vert (MeshData v)                                                         
-      \n            {\n                Interpolaters o;\n                o.vertex
-      = UnityObjectToClipPos(v.vertex); // localSpace to clipSpace  \n               
-      o.normal = v.normals; // show normals of the object -> visualize normalDirections    
-      \n                return o;  \n            }\n\n            // actual fragmentShader\n           
-      float4 frag (Interpolaters i) : SV_Target\n            {          \n               
-      return float4(i.normal,1);\n            }"
+    description: 
     isWeaponEffect: 0
     particleSystemGO: {fileID: 6849463590632446769, guid: cb05ca1735e4947c2b9f7dd57eb78bc0, type: 3}
     particlePosition: {x: 0, y: 0, z: 0}
     particleRotation: {x: 0, y: 0, z: 0}
   - title: Mango Normal
-    description: "struct Interpolaters  \n            { \n                \n               
-      float4 vertex : SV_POSITION; // clipSpacePosition of the vertex    \n               
-      float3 normal : TEXCOORD0;                    \n            };   \n\n           
-      Interpolaters vert (MeshData v)                                                         
-      \n            {\n                Interpolaters o;\n                o.vertex
-      = UnityObjectToClipPos(v.vertex); // localSpace to clipSpace  \n               
-      o.normal = v.normals; // show normals of the object -> visualize normalDirections    
-      \n                return o;  \n            }\n\n            // actual fragmentShader\n           
-      float4 frag (Interpolaters i) : SV_Target\n            {          \n               
-      return float4(i.normal,1);\n            }"
+    description: 
     isWeaponEffect: 0
     particleSystemGO: {fileID: 617608312720525049, guid: 06cbe4196e0bf478eb78204e45d7339d, type: 3}
     particlePosition: {x: 0, y: 0, z: 0}
@@ -950,11 +932,7 @@ MonoBehaviour:
     particlePosition: {x: 0, y: 0, z: 0}
     particleRotation: {x: 0, y: 0, z: 0}
   - title: Frac Shader
-    description: "float4 frag (Interpolaters i) : SV_Target\n            {\n               
-      // blend between 2 colors based on the X UV coordinates with lerp \n               
-      float t = abs(frac(i.uv.x * 5) * 2 - 1 );\n                return t;\n\n               
-      float4 outColor = lerp(_ColorA, _ColorB, t);\n                return outColor;\n           
-      }"
+    description: 
     isWeaponEffect: 0
     particleSystemGO: {fileID: 498183912771773320, guid: 3fc525b30ec62493c9bde170f8940750, type: 3}
     particlePosition: {x: 0, y: 0, z: 0}
@@ -977,7 +955,7 @@ MonoBehaviour:
     particleSystemGO: {fileID: 2388501994295683405, guid: a3e9b9669a9884b8295992c1d4b0b6c5, type: 3}
     particlePosition: {x: 0, y: 0, z: 0}
     particleRotation: {x: 0, y: 0, z: 0}
-  - title: ZicZac
+  - title: Zic Zac
     description: 
     isWeaponEffect: 0
     particleSystemGO: {fileID: 3121062951069932226, guid: 60098a2f08ac2406493b8f6c4bcc04a6, type: 3}
@@ -996,8 +974,7 @@ MonoBehaviour:
     particlePosition: {x: 0, y: 0, z: 0}
     particleRotation: {x: 0, y: 0, z: 0}
   - title: Animated Gradient
-    description: " // Blending\n\n            Cull Off\n            ZWrite Off  
-      \n            Blend One One"
+    description: "Cull Off\nZWrite Off   \nBlend One One"
     isWeaponEffect: 0
     particleSystemGO: {fileID: 2125339429116926184, guid: 70aa4b01f02fd4c54a33cd9e04bcf06d, type: 3}
     particlePosition: {x: 0, y: 0, z: 0}

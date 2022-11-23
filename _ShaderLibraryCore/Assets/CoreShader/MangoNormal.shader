@@ -10,6 +10,8 @@ Shader "Unlit/MangoNormal"
           
         Pass 
         {
+            Cull Off
+            
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
